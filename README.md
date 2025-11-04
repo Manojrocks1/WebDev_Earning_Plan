@@ -1,4 +1,4 @@
-🗓️ Web Development Earning Plan Progress
+                                                              🗓️ Web Development Earning Plan Progress
 ✅ Day 1: Setup
  . Installed VS Code, Git, and browser dev tools
  . Created GitHub repository: WebDev_Earning_plan
