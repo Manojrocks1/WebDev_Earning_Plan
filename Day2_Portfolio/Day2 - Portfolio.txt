@@ -1,0 +1,544 @@
+                             🌐 "Day 2 – Build Your Personal Portfolio Website"
+
+🎯 Goal:
+Create and deploy a clean, responsive "portfolio website" using 
+ "HTML + CSS + JavaScript", with sections for About, Skills, Projects, and Contact.
+
+🧱 Folder Setup
+
+Inside your Day2_Portfolio/ folder create:
+
+Day2_Portfolio/
+│
+├── Portfolio.html
+├── portfolio.css
+└── Portfolio.js
+
+
+                                                   🧩 "Step 1: Portfolio.html"
+
+ Code(HTML5):
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manoj Kumar - Portfolio</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== Header / Navigation ===== -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Manoj<span> Kumar</span></h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <h2>Hello, I'm <span>Manoj Kumar</span></h2>
+    <p>Frontend Web Developer | JavaScript | React | Tailwind CSS</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I’m a passionate web developer who loves building responsive, clean, and interactive websites.
+      My focus is on creating user-friendly experiences using modern web technologies.
+    </p>
+  </section>
+
+  <!-- ===== Skills Section ===== -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div>HTML5</div>
+      <div>CSS3</div>
+      <div>JavaScript</div>
+      <div>React</div>
+      <div>Tailwind CSS</div>
+      <div>Node.js</div>
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Restaurant Landing Page</h3>
+        <p>A modern landing page for a food business using HTML & Tailwind CSS.</p>
+      </div>
+      <div class="card">
+        <h3>To-Do App</h3>
+        <p>Simple task manager built with JavaScript and localStorage.</p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>This site you’re viewing! Built with HTML, CSS, and JS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="form-status"></p>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Manoj Kumar. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+                                        🎨 "Step 2: portfolio.css"
+
+Now style the website beautifully.
+
+/* Import font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fb;
+  color: #333;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #111;
+  color: white;
+}
+
+.logo span {
+  color: #00bcd4;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #111, #00bcd4);
+  color: white;
+}
+
+.hero span {
+  color: #ffd700;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #ffd700;
+  color: #111;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+}
+
+/* ===== Sections ===== */
+.section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  color: #00bcd4;
+}
+
+/* ===== Skills ===== */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.skills-list div {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-weight: 600;
+}
+
+/* ===== Projects ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Contact ===== */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+                                    ⚙️ "Step 3: Portfolio.js"
+
+Let’s add a simple "form interaction" (demo only):
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+  const status = document.getElementById("form-status");
+
+  if (!name || !email || !message) {
+    status.textContent = "Please fill all fields.";
+    status.style.color = "red";
+    return;
+  }
+
+  status.textContent = "Message sent successfully! (Demo)";
+  status.style.color = "green";
+
+  // Clear fields
+  this.reset();
+});
+
+After updating the code with HTML5, Taliwind CSS3 and JS the code is:
+  Code(Portfolio.html):
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manoj Kumar - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <nav class="navbar fixed w-full top-0 z-50 bg-black text-white shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold"><span class="text-white">Manoj</span><span class="text-cyan-400"> Kumar</span></h1>
+      <ul class="flex space-x-8 text-lg">
+        <li><a href="#about" class="hover:text-cyan-400 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-cyan-400 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-cyan-400 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-black via-cyan-900 to-cyan-500 text-white text-center px-4 pt-24">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 animate-[fadeInUp_1s_ease-in-out]">
+      Hello, I'm <span class="text-yellow-400">Manoj Kumar</span>
+    </h2>
+    <p class="text-xl mb-6 animate-[fadeInUp_1.5s_ease-in-out]">
+      Frontend Web Developer | JavaScript | React | Tailwind CSS
+    </p>
+    <a href="#contact"
+       class="hire-btn bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-3 px-6 rounded-lg shadow-lg transform transition hover:scale-105 hover:shadow-2xl animate-[fadeInUp_2s_ease-in-out]">
+      Hire Me
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white py-16 text-center">
+    <h2 class="text-3xl font-bold text-cyan-600 mb-4">About Me</h2>
+    <p class="max-w-3xl mx-auto text-gray-700 text-lg px-4">
+      I’m a passionate web developer who loves building responsive, clean, and interactive websites.
+      My focus is on creating user-friendly experiences using modern web technologies.
+    </p>
+  </section>
+
+  <!-- Add future sections: Skills | Projects | Contact -->
+
+</body>
+</html>
+
+   <!-- Skills Section -->
+  <section id="skills" class="bg-gray-50 py-16 text-center">
+    <h2 class="text-3xl font-bold text-cyan-600 mb-10">My Skills</h2>
+
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-6">
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 animate-[fadeInUp_1s_ease-in-out]">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">HTML5</h3>
+        <p class="text-gray-500 text-sm">Semantic & accessible markup</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 animate-[fadeInUp_1.2s_ease-in-out]">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">CSS3 / Tailwind</h3>
+        <p class="text-gray-500 text-sm">Modern styling & responsive design</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 animate-[fadeInUp_1.4s_ease-in-out]">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">JavaScript</h3>
+        <p class="text-gray-500 text-sm">Dynamic functionality & ES6+</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 animate-[fadeInUp_1.6s_ease-in-out]">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">React</h3>
+        <p class="text-gray-500 text-sm">Component-based UI development</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="bg-white py-16 text-center">
+    <h2 class="text-3xl font-bold text-cyan-600 mb-10">My Projects</h2>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+      <!-- Project 1 -->
+      <div class="bg-gray-50 p-5 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 animate-[fadeInUp_1.1s_ease-in-out]">
+        <img src="https://source.unsplash.com/600x400/?website,code" alt="Project 1" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Portfolio Website</h3>
+        <p class="text-gray-600 text-sm mb-3">A personal portfolio showcasing my projects, built with HTML, Tailwind, and JS.</p>
+        <a href="#" class="text-cyan-600 font-medium hover:underline">View Project →</a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-gray-50 p-5 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 animate-[fadeInUp_1.3s_ease-in-out]">
+        <img src="https://source.unsplash.com/600x400/?app,design" alt="Project 2" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Expense Tracker</h3>
+        <p class="text-gray-600 text-sm mb-3">A simple web app to manage expenses using JavaScript and localStorage.</p>
+        <a href="#" class="text-cyan-600 font-medium hover:underline">View Project →</a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-gray-50 p-5 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 animate-[fadeInUp_1.5s_ease-in-out]">
+        <img src="https://source.unsplash.com/600x400/?food,website" alt="Project 3" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Food Ordering App</h3>
+        <p class="text-gray-600 text-sm mb-3">Full-stack web app with vendor dashboard and online payments.</p>
+        <a href="#" class="text-cyan-600 font-medium hover:underline">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+   <!-- Contact Section -->
+<section id="contact" class="bg-gray-50 py-16 text-center">
+  <h2 class="text-3xl font-bold text-cyan-600 mb-6">Contact Me</h2>
+  <p class="text-gray-600 mb-10 max-w-xl mx-auto">
+    Have a project in mind or want to collaborate? Let’s connect!  
+    I’d love to hear from you.
+  </p>
+
+  <!-- Contact Form -->
+  <form id="contactForm" class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-lg space-y-4">
+    <div>
+      <label for="name" class="block text-left text-gray-700 font-medium mb-1">Full Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        required
+        class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-cyan-500 outline-none"
+      />
+    </div>
+
+    <div>
+      <label for="email" class="block text-left text-gray-700 font-medium mb-1">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-cyan-500 outline-none"
+      />
+    </div>
+
+    <div>
+      <label for="message" class="block text-left text-gray-700 font-medium mb-1">Your Message</label>
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Type your message..."
+        rows="5"
+        required
+        class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-cyan-500 outline-none"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="bg-cyan-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-cyan-700 transition-all duration-300"
+    >
+      Send Message
+    </button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-white text-center py-6 mt-12">
+  <p class="text-lg font-semibold">© 2025 Manoj Kumar | Frontend Developer</p>
+  <p class="text-sm text-gray-400">Made with ❤️ using Tailwind CSS</p>
+</footer>
+<script src="Portfolio.js"></script>
+</body>
+</html>
+
+Code(Portfolio.js):
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+  const status = document.getElementById("form-status");
+
+  if (!name || !email || !message) {
+    status.textContent = "Please fill all fields.";
+    status.style.color = "red";
+    return;
+  }
+
+  status.textContent = "Message sent successfully!";
+  status.style.color = "green";
+
+  // Clear fields
+  this.reset();
+
+//    Smooth Scroll + Form Alert
+  // Smooth scroll when "Hire Me" button is clicked
+  document.querySelector('button[href="#contact"], .hire-btn')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // Simple form submission alert
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your message! I’ll get back to you soon.');
+    this.reset();
+  });
+});
+
+                                         🌍 "Step 4: Preview & Deploy"
+
+1. Open "Portfolio.html" in your browser.
+2. Make sure layout and colors look good.
+3. When ready → push to GitHub:
+
+ git init
+ git add .
+ git commit -m "Day2: Portfolio Website"
+ git branch -M main
+ git remote add origin https://github.com/yourusername/Portfolio-Website.git
+git push -u origin main
+
+
+4. Deploy free on Netlify or Vercel.
+  Example: manojkumar-portfolio.netlify.app
+
+                               ✅ "Day 2 Checklist"
+Task	                                 Status
+HTML/CSS/JS files created	☐
+Portfolio styled & working	☐
+Uploaded to GitHub	                 ☐
+Deployed online	                 ☐
+Shared on LinkedIn	                 ☐  

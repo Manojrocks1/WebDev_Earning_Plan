@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manoj Kumar - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <nav class="navbar fixed w-full top-0 z-50 bg-black text-white shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold"><span class="text-white">Manoj</span><span class="text-cyan-400"> Kumar</span></h1>
+      <ul class="flex space-x-8 text-lg">
+        <li><a href="#about" class="hover:text-cyan-400 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-cyan-400 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-cyan-400 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-black via-cyan-900 to-cyan-500 text-white text-center px-4 pt-24">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 animate-[fadeInUp_1s_ease-in-out]">
+      Hello, I'm <span class="text-yellow-400">Manoj Kumar</span>
+    </h2>
+    <p class="text-xl mb-6 animate-[fadeInUp_1.5s_ease-in-out]">
+      Frontend Web Developer | JavaScript | React | Tailwind CSS
+    </p>
+    <a href="#contact"
+       class="hire-btn bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-3 px-6 rounded-lg shadow-lg transform transition hover:scale-105 hover:shadow-2xl animate-[fadeInUp_2s_ease-in-out]">
+      Hire Me
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white py-16 text-center">
+    <h2 class="text-3xl font-bold text-cyan-600 mb-4">About Me</h2>
+    <p class="max-w-3xl mx-auto text-gray-700 text-lg px-4">
+      I’m a passionate web developer who loves building responsive, clean, and interactive websites.
+      My focus is on creating user-friendly experiences using modern web technologies.
+    </p>
+  </section>
+
+  <!-- Add future sections: Skills | Projects | Contact -->
+
+</body>
+</html>
+
+   <!-- Skills Section -->
+  <section id="skills" class="bg-gray-50 py-16 text-center">
+    <h2 class="text-3xl font-bold text-cyan-600 mb-10">My Skills</h2>
+
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-6">
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 animate-[fadeInUp_1s_ease-in-out]">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">HTML5</h3>
+        <p class="text-gray-500 text-sm">Semantic & accessible markup</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 animate-[fadeInUp_1.2s_ease-in-out]">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">CSS3 / Tailwind</h3>
+        <p class="text-gray-500 text-sm">Modern styling & responsive design</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 animate-[fadeInUp_1.4s_ease-in-out]">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">JavaScript</h3>
+        <p class="text-gray-500 text-sm">Dynamic functionality & ES6+</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 animate-[fadeInUp_1.6s_ease-in-out]">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">React</h3>
+        <p class="text-gray-500 text-sm">Component-based UI development</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="bg-white py-16 text-center">
+    <h2 class="text-3xl font-bold text-cyan-600 mb-10">My Projects</h2>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+      <!-- Project 1 -->
+      <div class="bg-gray-50 p-5 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 animate-[fadeInUp_1.1s_ease-in-out]">
+        <img src="https://source.unsplash.com/600x400/?website,code" alt="Project 1" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Portfolio Website</h3>
+        <p class="text-gray-600 text-sm mb-3">A personal portfolio showcasing my projects, built with HTML, Tailwind, and JS.</p>
+        <a href="#" class="text-cyan-600 font-medium hover:underline">View Project →</a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-gray-50 p-5 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 animate-[fadeInUp_1.3s_ease-in-out]">
+        <img src="https://source.unsplash.com/600x400/?app,design" alt="Project 2" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Expense Tracker</h3>
+        <p class="text-gray-600 text-sm mb-3">A simple web app to manage expenses using JavaScript and localStorage.</p>
+        <a href="#" class="text-cyan-600 font-medium hover:underline">View Project →</a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-gray-50 p-5 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 animate-[fadeInUp_1.5s_ease-in-out]">
+        <img src="https://source.unsplash.com/600x400/?food,website" alt="Project 3" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Food Ordering App</h3>
+        <p class="text-gray-600 text-sm mb-3">Full-stack web app with vendor dashboard and online payments.</p>
+        <a href="#" class="text-cyan-600 font-medium hover:underline">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+   <!-- Contact Section -->
+<section id="contact" class="bg-gray-50 py-16 text-center">
+  <h2 class="text-3xl font-bold text-cyan-600 mb-6">Contact Me</h2>
+  <p class="text-gray-600 mb-10 max-w-xl mx-auto">
+    Have a project in mind or want to collaborate? Let’s connect!  
+    I’d love to hear from you.
+  </p>
+
+  <!-- Contact Form -->
+  <form id="contactForm" class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-lg space-y-4">
+    <div>
+      <label for="name" class="block text-left text-gray-700 font-medium mb-1">Full Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        required
+        class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-cyan-500 outline-none"
+      />
+    </div>
+
+    <div>
+      <label for="email" class="block text-left text-gray-700 font-medium mb-1">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-cyan-500 outline-none"
+      />
+    </div>
+
+    <div>
+      <label for="message" class="block text-left text-gray-700 font-medium mb-1">Your Message</label>
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Type your message..."
+        rows="5"
+        required
+        class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-cyan-500 outline-none"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="bg-cyan-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-cyan-700 transition-all duration-300"
+    >
+      Send Message
+    </button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-white text-center py-6 mt-12">
+  <p class="text-lg font-semibold">© 2025 Manoj Kumar | Frontend Developer</p>
+  <p class="text-sm text-gray-400">Made with ❤️ using Tailwind CSS</p>
+</footer>
+<script src="Portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+                       🔥 Day 1 – Build Your Online Foundation (Start Strong!)
+
+Your goal today:
+👉 Set up your "developer identity" — GitHub, LinkedIn, and folder structure — 
+ so you look professional and ready for clients.
+
+🎯 Day 1 Objectives
+1. Create a "GitHub account" (if you don’t have one).
+2. Set up a "LinkedIn profile" for web development.
+3. Create a "project workspace folder" on your computer.
+4. Install tools you’ll use daily as a developer.
+
+🧰 Step-by-Step Guide
+               🪄 "Step 1: Create Your GitHub Account"
+1. Go to 👉 https://github.com
+2. Click "Sign up" → Use your professional email.
+3. Set your username like:
+ manojkumar-dev
+ manojkumar-web
+
+4. Add a profile photo, short bio, and link (if available):
+
+“Full Stack Web Developer | MERN | Building awesome web experiences.”
+
+5. Create your first repository:
+
+Portfolio-Website
+
+
+(You’ll upload your portfolio here on Day 2)
+
+                          💼 "Step 2: Optimize Your LinkedIn Profile"
+
+Go to 👉 https://linkedin.com
+
+✅ Update these:
+ 
+ . "Profile Picture": Use a clean, smiling photo.
+ . "Headline":
+   “Frontend Web Developer | React | JavaScript | Tailwind CSS | Node.js Learner”
+
+About Section:
+ Write 3–4 lines like this:
+
+“I’m a passionate web developer who loves creating user-friendly, modern
+ websites using React and Tailwind CSS. 
+->Currently building projects to help small businesses grow online.”
+. Featured Section: (Add your GitHub link tomorrow)
+. Add Connections: Send requests to 10–20 other developers or recruiters.
+
+                               🗂 "Step 3: Create Your Project Folder Structure"
+
+Create a folder on your system like this:
+
+WebDev-Earning-Plan/
+│
+├── Day1_Setup/
+├── Day2_Portfolio/
+├── Day3_Restaurant_Page/
+├── Day4_ToDo_App/
+├── Day5_Deployment/
+└── Assets/
+
+
+This keeps all your learning and projects organized.
+
+                                    ⚙️ "Step 4: Install Essential Tools"
+Tool	Purpose	                              Link
+VS Code	Code editor	            code.visualstudio.com
+
+Node.js	To run JS backend tools          nodejs.org
+
+Git	Version control	              git-scm.com
+
+Google Chrome	For testing	google.com/chrome
+
+Once installed:
+
+git --version
+node -v
+npm -v
+
+
+✅ If all show versions → you’re ready!
+
+                                  💡 "Bonus Task (Optional but Powerful)"
+ . Create a simple "README.md" file inside your "WebDev-Earning-Plan" folder:
+
+# Web Development Earning Journey
+Starting from Day 1 to build skills, clients, and income through web development.
+
+✅ Day 1 Checklist
+Task	                                   Status
+GitHub account created	 ☐ (Completed)
+LinkedIn profile optimized	 ☐ (Completed)
+Folder structure created	 ☐ (Completed)
+Tools installed	                  ☐ (Completed)
+README file created	                  ☐ (Completed)
