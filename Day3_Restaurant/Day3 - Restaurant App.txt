@@ -1,0 +1,253 @@
+                               🌐 "Day 3 – Restaurant Landing Page Project"
+
+🎯 Goal:
+Create a" modern, responsive landing page" for a restaurant using "HTML + Tailwind CSS", 
+ including hero section, menu, about, and contact.
+
+🧱 Folder Setup
+
+Inside your "Day3_Restaurant/" folder create:
+
+Day3_Restaurant_Page/
+│
+├── index.html
+└── style.css   (optional, minimal)
+
+
+We’ll mostly use "Tailwind CSS CDN", so no need to install anything.
+                                         🧩 "Step 1: index.html"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manoj Bites - Restaurant</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html{
+      scroll-behavior: smooth;
+    }
+    html
+    ,body { font-family: "Poppins", sans-serif; }
+    /* small custom override for container width */
+    .container { max-width: 1100px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow">
+    <div class="container flex items-center justify-between py-4">
+      <a class="text-2xl font-bold text-green-600" href="#">Manoj Bites</a>
+      <nav class="hidden md:flex gap-8 items-center">
+        <a href="#about" class="hover:text-green-600">About</a>
+        <a href="#menu" class="hover:text-green-600">Menu</a>
+        <a href="#gallery" class="hover:text-green-600">Gallery</a>
+        <a href="#contact" class="hover:text-green-600">Contact</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button id="mobileBtn" class="md:hidden p-2 rounded hover:bg-gray-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="flex flex-col p-4 gap-3">
+        <a href="#about" class="py-2">About</a>
+        <a href="#menu" class="py-2">Menu</a>
+        <a href="#gallery" class="py-2">Gallery</a>
+        <a href="#contact" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-green-600 text-white py-20">
+    <div class="container text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Welcome to Delicious Bites</h1>
+      <p class="max-w-2xl mx-auto text-lg md:text-xl mb-6">Fresh ingredients, great taste — crafted with love. Order online or visit us today!</p>
+      <div class="flex justify-center gap-4">
+        <a href="#menu" class="bg-white text-green-600 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition">See Menu</a>
+        <a href="#contact" class="border border-white px-6 py-3 rounded-md font-semibold hover:bg-white/10 transition">Reserve a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-16">
+    <div class="container text-center">
+      <h2 class="text-3xl font-bold text-green-600 mb-4">About Us</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-6">
+        Manoj Bites is a neighborhood restaurant focused on fresh ingredients and warm hospitality.
+        Our chefs craft every dish with care — from classic pizzas to comforting pastas and seasonal specials.
+      </p>
+      <div class="flex justify-center gap-6">
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold">10+</h3>
+          <p class="text-gray-500">Dishes</p>
+        </div>
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold">1k+</h3>
+          <p class="text-gray-500">Happy Customers</p>
+        </div>
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold">1</h3>
+          <p class="text-gray-500">Years Serving</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="bg-gray-100 py-16">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-center text-green-600 mb-10">Our Menu</h2>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <!-- card 1 -->
+        <article class="bg-white p-6 rounded-lg shadow hover:scale-105 transform transition">
+          <img src="Images/Marpizza.jpg" alt="Margherita" class="w-full h-40 object-cover rounded mb-4">
+          <h3 class="text-xl font-semibold mb-2">Margherita Pizza</h3>
+          <p class="text-gray-600 mb-3">Classic Italian pizza with fresh basil and mozzarella.</p>
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-green-600">₹250</span>
+            <button class="px-3 py-1 rounded bg-green-600 text-white text-sm">Order</button>
+          </div>
+        </article>
+
+        <!-- card 2 -->
+        <article class="bg-white p-6 rounded-lg shadow hover:scale-105 transform transition">
+          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=60" alt="Burger" class="w-full h-40 object-cover rounded mb-4">
+          <h3 class="text-xl font-semibold mb-2">Veg Burger</h3>
+          <p class="text-gray-600 mb-3">Grilled veggie patty with lettuce, tomato & special sauce.</p>
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-green-600">₹150</span>
+            <button class="px-3 py-1 rounded bg-green-600 text-white text-sm">Order</button>
+          </div>
+        </article>
+
+        <!-- card 3 -->
+        <article class="bg-white p-6 rounded-lg shadow hover:scale-105 transform transition">
+          <img src="Images/Pasta Alfredo.jpg" alt="Pasta" class="w-full h-40 object-cover rounded mb-4">
+          <h3 class="text-xl font-semibold mb-2">Pasta Alfredo</h3>
+          <p class="text-gray-600 mb-3">Creamy Alfredo pasta served with garlic bread.</p>
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-green-600">₹300</span>
+            <button class="px-3 py-1 rounded bg-green-600 text-white text-sm">Order</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="py-16">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-center text-green-600 mb-8">Gallery</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img class="w-full h-36 object-cover rounded" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=60" alt="food1">
+        <img class="w-full h-36 object-cover rounded" src="https://images.unsplash.com/photo-1546069901-eacef0df6022?auto=format&fit=crop&w=800&q=60" alt="food2">
+        <img class="w-full h-36 object-cover rounded" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=60" alt="food3">
+        <img class="w-full h-36 object-cover rounded" src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=800&q=60" alt="food4">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-gray-50 py-16">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-center text-green-600 mb-6">Contact & Reservations</h2>
+
+      <div class="max-w-3xl mx-auto grid gap-6 md:grid-cols-2">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-semibold mb-3">Visit Us</h3>
+          <p class="text-gray-600 mb-2">123 Food Street, City Name</p>
+          <p class="text-gray-600 mb-2">Phone: +91 98765 43210</p>
+          <p class="text-gray-600">Hours: Mon-Sun 10:00 - 22:00</p>
+          <div class="mt-4">
+            <a href="https://www.google.com/maps" target="_blank" class="inline-block px-4 py-2 border border-green-600 text-green-600 rounded hover:bg-green-50">Open Map</a>
+          </div>
+        </div>
+
+        <form id="contactForm" class="bg-white p-6 rounded-lg shadow flex flex-col gap-4">
+          <input type="text" id="name" placeholder="Your name" class="border p-3 rounded" required>
+          <input type="email" id="email" placeholder="Your email" class="border p-3 rounded" required>
+          <textarea id="message" rows="4" placeholder="Your message / reservation details" class="border p-3 rounded" required></textarea>
+          <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded font-semibold hover:bg-green-700">Send Message</button>
+          <p id="formStatus" class="text-sm"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t py-6">
+    <div class="container text-center text-gray-600">
+      © 2025 Manoj Bites • Made with ❤️
+    </div>
+  </footer>
+</body>
+</html>
+
+Code(Restaurant.js):
+    // <!-- Minimal JS for mobile menu toggle + contact form demo
+
+    // mobile menu toggle
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // contact form demo (no backend) - show success message and clear fields
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const status = document.getElementById('formStatus');
+      status.textContent = 'Message sent! (Demo) — I will contact you soon.';
+      status.style.color = 'green';
+      this.reset();
+
+      // small fade effect
+      status.style.opacity = 1;
+      setTimeout(() => { status.style.opacity = 0.9; }, 2000);
+    });
+
+                                      ⚡ "Step 2: Key Features"
+1. "Responsive Layout" using Tailwind’s grid and flex utilities
+2. "Hover effects" on menu cards (hover:scale-105)
+3. "Call-to-action buttons" for menu & contact
+4. "Simple, professional color palette" (green + white)
+5. Fully mobile-friendly (Tailwind handles most responsiveness)
+
+                                        🌍 "Step 3: Preview & Deploy"
+1. Open "index.html" in your browser → check layout & responsiveness
+2. Deploy on "Netlify" or "Vercel":
+  . Drag & drop folder to Netlify → done in 1 minute
+  . Share link on LinkedIn or GitHub
+
+                                              ✅ Day 3 Checklist
+Task	                                                      Status
+HTML + Tailwind Landing Page created	   ☐ (Completed)
+Responsive menu & contact sections done	   ☐ (Completed)
+Buttons and hover effects added	                    ☐ (Completed)
+Page previewed on mobile & desktop	   ☐ (Completed)
+Deployed online & shared	                    ☐
+
+Notes & quick tips
+. Images above use Unsplash CDN links for demo. 
+->Replace with your own images (place them in "assets"/ and update "src").
+. To make the form actually send messages you can:
+  . Add a simple Formspree or Getform endpoint (no backend needed), or
+  . Add a Node/Express endpoint later (Day 8+).
+  . To deploy on Netlify: create a new site → drag & drop this folder
+  (or connect your GitHub repo) → publish.
