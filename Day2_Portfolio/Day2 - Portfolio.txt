@@ -537,8 +537,8 @@ git push -u origin main
 
                                ✅ "Day 2 Checklist"
 Task	                                 Status
-HTML/CSS/JS files created	☐
-Portfolio styled & working	☐
-Uploaded to GitHub	                 ☐
-Deployed online	                 ☐
-Shared on LinkedIn	                 ☐  
+HTML/CSS/JS files created	☐ (Completed)
+Portfolio styled & working	☐ (Completed)
+Uploaded to GitHub	                 ☐ (Completed)
+Deployed online	                 ☐ (Completed)
+Shared on LinkedIn	                 ☐ (Completed)

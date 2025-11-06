@@ -19,6 +19,13 @@
     ,body { font-family: "Poppins", sans-serif; }
     /* small custom override for container width */
     .container { max-width: 1100px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+    @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -131,6 +138,61 @@
       </div>
     </div>
   </section>
+  
+  <!-- Updated Code -->
+  <!-- FILTERABLE MENU -->
+<section id="filter-menu" class="py-16 bg-white">
+  <div class="container text-center">
+    <h2 class="text-3xl font-bold text-green-600 mb-8">Explore Our Dishes</h2>
+
+    <!-- Filter Buttons -->
+    <div class="flex justify-center flex-wrap gap-4 mb-10">
+      <button class="filter-btn bg-green-600 text-white px-5 py-2 rounded-full" data-filter="all">All</button>
+      <button class="filter-btn border border-green-600 text-green-700 px-5 py-2 rounded-full" data-filter="starters">Starters</button>
+      <button class="filter-btn border border-green-600 text-green-700 px-5 py-2 rounded-full" data-filter="main">Main Course</button>
+      <button class="filter-btn border border-green-600 text-green-700 px-5 py-2 rounded-full" data-filter="desserts">Desserts</button>
+    </div>
+
+    <!-- Menu Grid -->
+    <div id="menu-items" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="menu-item starters bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="images/soup.jpg" alt="Soup" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-xl font-semibold text-green-800">Tomato Soup</h3>
+        <p class="text-gray-600 mt-2">A comforting starter with herbs.</p>
+      </div>
+
+      <div class="menu-item main bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="images/pasta.jpg" alt="Pasta" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-xl font-semibold text-green-800">Creamy Alfredo Pasta</h3>
+        <p class="text-gray-600 mt-2">Rich and creamy Italian delight.</p>
+      </div>
+
+      <div class="menu-item desserts bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="images/cake.jpg" alt="Cake" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-xl font-semibold text-green-800">Chocolate Lava Cake</h3>
+        <p class="text-gray-600 mt-2">Warm chocolate cake with molten center.</p>
+      </div>
+
+      <div class="menu-item starters bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="images/salad.jpg" alt="Salad" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-xl font-semibold text-green-800">Garden Fresh Salad</h3>
+        <p class="text-gray-600 mt-2">Crisp veggies with tangy dressing.</p>
+      </div>
+
+      <div class="menu-item main bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="images/biryani.jpg" alt="Biryani" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-xl font-semibold text-green-800">Hyderabadi Biryani</h3>
+        <p class="text-gray-600 mt-2">Aromatic rice with rich spices.</p>
+      </div>
+
+      <div class="menu-item desserts bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="images/icecream.jpg" alt="Ice Cream" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-xl font-semibold text-green-800">Vanilla Ice Cream</h3>
+        <p class="text-gray-600 mt-2">Smooth, creamy, and classic.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- GALLERY -->
   <section id="gallery" class="py-16">
@@ -178,5 +240,6 @@
       © 2025 Manoj Bites • Made with ❤️
     </div>
   </footer>
+  <script src="Restaurant.js"></script>
 </body>
 </html>

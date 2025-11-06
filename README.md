@@ -1,4 +1,4 @@
-🗓️ Web Development Earning Plan Progress
+                                                            🗓️ Web Development Earning Plan Progress
 ✅ Day 1: Setup
  . Installed VS Code, Git, and browser dev tools
  . Created GitHub repository: WebDev_Earning_plan
@@ -9,30 +9,27 @@
  . Sections: Hero, About Me, Skills, Projects, Contact
  . Learned: Responsive design, smooth scrolling, and portfolio presentation
  . 💰 Freelance Value: ₹1,000–₹3,000 per client website
+<<<<<<< HEAD
 
-                        🍴 "Day 3 – Restaurant Landing Page"
+                       # Day 3: 🍽️ Manoj Bites – Modern Restaurant Website
 
-🎯 Goal: Design a modern, attractive landing page for a restaurant to display its 
- menu, ambiance, and contact details.
+A responsive and elegant restaurant website built using **HTML, 
+ Tailwind CSS, and JavaScript**.
 
-                                      "🛠 Tech Stack":
+## 🌟 Features
+- 🧭 Smooth scroll navigation  
+- 📱 Mobile-friendly responsive layout  
+- 🍕 Interactive **Menu Filter** (All | Starters | Main Course | Desserts)  
+- ✉️ Working contact form (demo mode)  
+- 🎞️ Clean gallery section  
+- ⚡ Built with Tailwind CSS utility classes for fast styling  
 
- . HTML5
- .Taiwind CSS
- . JavaScript (Smooth scrolling + simple animations)
+## 🛠️ Tech Stack
+- **Frontend:** HTML5, Tailwind CSS  
+- **Interactivity:** Vanilla JavaScript  
+- **Icons:** SVGs and emoji-based icons  
 
-                                         ✨ Features:
-
-. Hero section with restaurant name & call-to-action button
-. About, Menu, Gallery and Contact sections
-. Smooth scroll navigation
-. Hover effects on menu items
-. Fully responsive design for mobile & desktop
-
-🌐 Live Demo: https://manurestaurantpage.netlify.app
-
-💻 Code: GitHub Repository
-
-🚀 Learning Outcome:
-Learned how to create an elegant, responsive restaurant landing page 
- with interactive UI and smooth user experience.
+## 🚀 How to Run
+1. Clone this repository  
+   ```bash
+   git clone https://github.com/yourusername/manoj-bites.git
