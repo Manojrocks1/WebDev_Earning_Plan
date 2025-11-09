@@ -1,35 +1,40 @@
-                                                            🗓️ Web Development Earning Plan Progress
-✅ Day 1: Setup
- . Installed VS Code, Git, and browser dev tools
- . Created GitHub repository: WebDev_Earning_plan
- . Learned how to structure folders for daily projects
+                                    # 💻 Full Stack Web Development Journey
 
-✅ Day 2: Personal Portfolio Website
- . Built a complete responsive portfolio using HTML5, Tailwind CSS, JS.
- . Sections: Hero, About Me, Skills, Projects, Contact
- . Learned: Responsive design, smooth scrolling, and portfolio presentation
- . 💰 Freelance Value: ₹1,000–₹3,000 per client website
-<<<<<<< HEAD
+This repository contains my **daily web development projects** as part of my hands-on learning path.  
+Each folder represents one day’s mini-project — designed, built, and refined from scratch.
 
-                       # Day 3: 🍽️ Manoj Bites – Modern Restaurant Website
+---
 
-A responsive and elegant restaurant website built using **HTML, 
- Tailwind CSS, and JavaScript**.
+## 📆 Project Progress
 
-## 🌟 Features
-- 🧭 Smooth scroll navigation  
-- 📱 Mobile-friendly responsive layout  
-- 🍕 Interactive **Menu Filter** (All | Starters | Main Course | Desserts)  
-- ✉️ Working contact form (demo mode)  
-- 🎞️ Clean gallery section  
-- ⚡ Built with Tailwind CSS utility classes for fast styling  
+| Day | Project Name         | Technologies Used           | Status |
+|-----|----------------------|-----------------------------|---------|
+| 1   | Personal Website     | HTML5, CSS                   | ✅ Done |
+| 2   | Recipe Book          | HTML5, CSS, JS, localStorage | ✅ Done |
+| 3   | Restaurant Website   | HTML5, Tailwind CSS, JS      | ✅ Done |
+| 4   | To-Do App            | HTML5, Tailwind CSS, JS      | ✅ Done |
 
-## 🛠️ Tech Stack
-- **Frontend:** HTML5, Tailwind CSS  
-- **Interactivity:** Vanilla JavaScript  
-- **Icons:** SVGs and emoji-based icons  
+---
 
-## 🚀 How to Run
-1. Clone this repository  
-   ```bash
-   git clone https://github.com/yourusername/manoj-bites.git
+## 🚀 Purpose
+To strengthen my **frontend + full stack** fundamentals by building a project every day.  
+All projects are beginner-friendly, responsive, and focus on key developer concepts.
+
+---
+
+## 📂 Repository Highlights
+- Daily structured folders  
+- Clean and commented code  
+- README files for each day  
+- Easy to clone and learn from
+
+---
+
+## 🧑‍💻 Author
+**Manoj Kumar**  
+Full Stack Developer in progress 🚀  
+[GitHub Profile](https://github.com/yourusername)
+
+---
+
+⭐ *If you like my learning journey, consider starring the repo!*
