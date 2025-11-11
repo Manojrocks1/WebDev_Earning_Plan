@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 5 — Product Showcase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-purple-100 to-blue-100 min-h-screen flex flex-col items-center p-6">
+
+  <h1 class="text-4xl font-bold mb-6 text-purple-700 text-center">🛍️ Product Showcase</h1>
+
+  <!-- Search Bar -->
+  <div class="flex justify-center w-full max-w-xl mb-4">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search products (e.g., watch, pizza)..."
+      class="w-full px-4 py-2 border border-purple-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+    />
+  </div>
+
+  <!-- Category Filters -->
+  <div class="flex flex-wrap justify-center gap-3 mb-6">
+    <button class="filter-btn bg-purple-600 text-white px-4 py-2 rounded-md" data-category="all">All</button>
+    <button class="filter-btn bg-white text-purple-600 border border-purple-300 px-4 py-2 rounded-md" data-category="electronics">Electronics</button>
+    <button class="filter-btn bg-white text-purple-600 border border-purple-300 px-4 py-2 rounded-md" data-category="fashion">Fashion</button>
+    <button class="filter-btn bg-white text-purple-600 border border-purple-300 px-4 py-2 rounded-md" data-category="food">Food</button>
+  </div>
+
+  <!-- Progress Section -->
+  <div class="w-full max-w-3xl mb-6">
+    <div id="progressText" class="text-gray-700 text-sm mb-2 text-center">0 of 0 products shown</div>
+    <div class="w-full bg-gray-200 rounded-full h-2">
+      <div id="progress" class="h-2 bg-purple-600 w-0 transition-all duration-500 rounded-full"></div>
+    </div>
+  </div>
+
+  <!-- Product Grid -->
+  <div id="productContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl">
+    <!-- Products will appear here -->
+  </div>
+
+  <!-- No Results Message -->
+  <p id="noResults" class="text-center text-gray-500 mt-6 hidden">
+    😕 No products found. Try another search!
+  </p>
+
+  <!-- Footer -->
+  <p class="mt-10 text-gray-500 text-sm text-center">Day 5 Project — Product Showcase</p>
+
+  <script src="Product.js"></script>
+</body>
+</html>
