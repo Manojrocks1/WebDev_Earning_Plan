@@ -7,13 +7,14 @@ Each folder represents one day’s mini-project — designed, built, and refined
 
 ## 📆 Project Progress
 
-| Day | Project Name         | Technologies Used           | Status |
-|-----|----------------------|-----------------------------|---------|
-| 1   | Personal Website            | HTML5, CSS                   | ✅ Done |
-| 2   | Recipe Book                    | HTML5, CSS, JS, localStorage | ✅ Done |
-| 3   | Restaurant Website         | HTML5, Tailwind CSS, JS      | ✅ Done |
-| 4   | To-Do App                      | HTML5, Tailwind CSS, JS      | ✅ Done |
-| 5 | Product Showcase Website | HTML5, Tailwind CSS, JS | ✅ Done |
+| Day | Project Name               | Technologies Used           | Status |
+|-----|----------------------------|-----------------------------|--------|
+| 1   | Personal Website           | HTML5, CSS                  | ✅ Done |
+| 2   | Recipe Book                | HTML5, CSS, JS, localStorage| ✅ Done |
+| 3   | Restaurant Website         | HTML5, Tailwind CSS, JS     | ✅ Done |
+| 4   | To-Do App                  | HTML5, Tailwind CSS, JS     | ✅ Done |
+| 5   | Product Showcase Website   | HTML5, Tailwind CSS, JS     | ✅ Done |
+| 6   | Freelance Portfolio Website| HTML5, Tailwind CSS, JS     | ✅ Done |
 
 ---
 
