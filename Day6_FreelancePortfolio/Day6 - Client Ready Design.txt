@@ -1,0 +1,357 @@
+             💼 Day 6 – Build a Freelance Portfolio Website (Client-Ready Design)
+🎯 Goal:
+
+Create your "personal freelance portfolio website" to attract paying clients.
+This site will highlight your skills, completed projects (like Day1–Day5),
+ and a contact form for inquiries.
+
+                                            "🧠 What You’ll Learn Today":
+1. "Structuring your personal brand" — how to present your skills and services 
+ professionally.
+2. "Portfolio layout with Tailwind CSS" — clean hero, project showcase, 
+ testimonials, and contact section.
+3. "Adding an inquiry form (using Formspree or EmailJS)" — so clients can message you directly.
+4. "Optimizing for freelancing" — what to write to get clients interested.
+
+                                               "🛠 Tech Stack":
+. HTML5 
+. Tailwind CSS
+. JavaScript
+
+✨ Sections to Include:
+
+ . 🏠 Hero (Your Name + Tagline like “Frontend Developer for Small Businesses”)
+ . 💼 Services (e.g., “Landing Page Design”, “Portfolio Setup”, “Restaurant Website”)
+ . 📸 Portfolio Gallery (Showcase Day1–Day5 projects)
+ . 📬 Contact Form (Formspree or EmailJS integration)
+ . 🌐 Social Links (LinkedIn, GitHub, Netlify)
+
+                                          "💰 Earning Tip of the Day":
+
+Once the site is live, share it on:
+ . "💼 LinkedIn" (as “Now open for freelance projects”)
+ . 🌍 "Freelancer, Fiverr, Upwork" (use your portfolio link in your profile)
+ . "📱 WhatsApp / Instagram Bio" (add “Hire Me” link)
+
+🧩 Project Name: Day6_FreelancePortfolio
+                                                   "📁 Folder Structure"
+Day6_FreelancePortfolio/
+│
+├── index.html
+├── script.js
+├── images/
+│   ├── profile.jpg
+│   ├── project1.jpg
+│   ├── project2.jpg
+│   └── project3.jpg
+└── README.md
+
+                                                            "🧱 index.html"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manoj Kumar — Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="fixed w-full top-0 left-0 bg-white shadow-md z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#home" class="text-2xl font-bold text-green-600">Manoj Kumar</a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex gap-8 items-center text-lg font-medium">
+        <a class="nav-link hover:text-green-600" href="#home">Home</a>
+        <a class="nav-link hover:text-green-600" href="#services">Services</a>
+        <a class="nav-link hover:text-green-600" href="#work">Work</a>
+        <a class="nav-link hover:text-green-600" href="#contact">Contact</a>
+      </nav>
+
+      <!-- Mobile button -->
+      <div class="md:hidden flex items-center gap-3">
+        <!-- social small -->
+        <a href="https://github.com/yourusername" target="_blank" class="text-gray-700 mr-2">GitHub</a>
+        <button id="menu-btn" class="text-2xl p-2 rounded-md hover:bg-gray-100 focus:outline-none">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE SIDEBAR + OVERLAY -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm hidden z-40 transition-opacity duration-300"></div>
+
+  <aside id="mobileMenu"
+         class="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50 md:hidden">
+    <div class="flex justify-between items-center p-4 border-b">
+      <div class="text-lg font-bold text-green-600">Menu</div>
+      <button id="close-menu" class="p-2 text-gray-700">✕</button>
+    </div>
+    <nav class="p-6 flex flex-col gap-4 text-gray-700 font-semibold">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#work" class="mobile-link">Work</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <div class="mt-4 pt-4 border-t">
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="block text-sm text-gray-600">LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank" class="block text-sm text-gray-600">GitHub</a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- HERO -->
+  <main id="home" class="pt-20">
+    <section class="hero-gradient text-white py-28">
+      <div class="max-w-4xl mx-auto text-center px-6">
+        <img src="Images/Profilepic.jpeg" alt="Manoj" class="mx-auto w-36 h-36 rounded-full profile-img mb-6 fade-in" data-delay="0.1">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight fade-in" data-delay="0.2">
+          <span id="typed" class="typed"></span>
+        </h1>
+        <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-white/90 fade-in" data-delay="0.4">
+          A passionate Web Developer crafting beautiful and responsive websites for clients worldwide.
+        </p>
+
+        <div class="mt-8 fade-in" data-delay="0.6">
+          <a href="#contact" class="inline-block bg-white text-green-700 font-semibold px-6 py-3 rounded-lg shadow hover:scale-105 transition transform">Hire Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-6 fade-in">Services</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-2xl shadow-md fade-in" data-delay="0.1">
+            <h3 class="font-semibold mb-2">Web Development</h3>
+            <p class="text-sm text-gray-600">Responsive websites, landing pages, static and small dynamic sites.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md fade-in" data-delay="0.3">
+            <h3 class="font-semibold mb-2">UI/UX Design</h3>
+            <p class="text-sm text-gray-600">Clean and user-friendly interfaces using Tailwind CSS and modern patterns.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md fade-in" data-delay="0.5">
+            <h3 class="font-semibold mb-2">Freelance Support</h3>
+            <p class="text-sm text-gray-600">Client-ready deliverables, Git usage, and deployment guidance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK / PROJECTS -->
+    <section id="work" class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-8 fade-in">Work</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <article class="bg-white rounded-2xl shadow-md overflow-hidden fade-in" data-delay="0.1">
+            <a href="https://manurestaurantpage.netlify.app" target="_blank">
+            <img src="Images/Restaurant.png" alt="Restaurant" class="w-full h-40 object-cover">
+            </a>
+
+            <div class="p-5">
+              <h3 class="font-semibold mb-1">Restaurant Website</h3>
+              <p class="text-sm text-gray-600 mb-3">Modern UI with menu and contact integration.</p>
+              <a href="https://manurestaurantpage.netlify.app" target="_blank" class="text-green-600 font-medium">View Project →</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="bg-white rounded-2xl shadow-md overflow-hidden fade-in" data-delay="0.3">
+            <a href="https://manojkumartodo.netlify.app/" target="_blank">
+            <img src="Images/Todo.png" alt="Todo" class="w-full h-40 object-cover">
+            </a>
+
+            <div class="p-5">
+              <h3 class="font-semibold mb-1">To-Do App</h3>
+              <p class="text-sm text-gray-600 mb-3">LocalStorage-based task manager built with Tailwind + JS.</p>
+              <a href="https://manojkumartodo.netlify.app/" target="_blank" class="text-green-600 font-medium">View Project →</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="bg-white rounded-2xl shadow-md overflow-hidden fade-in" data-delay="0.5">
+            <a href="https://manuproductcase.netlify.app/" target="_blank">
+            <img src="Images/Productshowcase.png" alt="Product" class="w-full h-40 object-cover">
+            </a>
+
+            <div class="p-5">
+              <h3 class="font-semibold mb-1">Product Showcase</h3>
+              <p class="text-sm text-gray-600 mb-3">Filter, search and progress features demo.</p>
+              <a href="https://manuproductcase.netlify.app/" target="_blank" class="text-green-600 font-medium">View Project →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-6 fade-in">Contact</h2>
+        <form class="bg-white p-8 rounded-2xl shadow-md grid gap-4 fade-in" data-delay="0.2">
+          <input class="border p-3 rounded" placeholder="Your name" />
+          <input class="border p-3 rounded" placeholder="Your email" />
+          <textarea class="border p-3 rounded" rows="4" placeholder="Message"></textarea>
+          <button class="bg-green-600 text-white p-3 rounded hover:bg-green-700 transition">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="py-8 text-center text-sm text-gray-500">
+      © 2025 Manoj Kumar — Built with ❤️
+    </footer>
+  </main>
+
+  <!-- Scroll to top -->
+  <button id="toTop" aria-label="Scroll to top" class="bg-green-600 text-white p-3 rounded-full shadow-lg">
+    ↑
+  </button>
+
+</body>
+ <script src="Portfolio.js"></script>
+</html>
+
+                                                 "portfolio.css"
+
+    :root { --accent: #16a34a; --accent-dark: #059669; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; }
+
+    /* Animated gradient background for hero */
+    .hero-gradient {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #06b6d4 100%);
+      background-size: 200% 200%;
+      animation: gradientMove 12s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* fade-in-up keyframes for reveal */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* typing effect */
+    .typed {
+      display: inline-block;
+      border-right: 2px solid rgba(255,255,255,0.6);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    /* profile shadow */
+    .profile-img {
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      border: 6px solid rgba(255,255,255,0.08);
+    }
+
+    /* slide-in menu transition handled by translate-x-full class from tailwind */
+    /* scroll to top button */
+    #toTop {
+      position: fixed;
+      right: 18px;
+      bottom: 22px;
+      z-index: 60;
+      display: none;
+    }
+
+Code(Portfolio.js):
+       {/* ---------- Typing animation ---------- */}
+    (function typing(){
+      const el = document.getElementById('typed');
+      const text = "Hi, I'm Manoj Kumar 👋";
+      let i = 0;
+      function type() {
+        el.textContent = text.slice(0, i++);
+        if(i <= text.length) {
+          setTimeout(type, 45);
+        } else {
+          // remove caret after finish
+          el.style.borderRight = 'none';
+        }
+      }
+      type();
+    })();
+
+     {/* ---------- Mobile menu + overlay ---------- */}
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+    const closeMenu = document.getElementById('close-menu');
+
+    function openMenu() {
+      mobileMenu.classList.remove('translate-x-full');
+      overlay.classList.remove('hidden');
+    }
+    function closeMenuFn() {
+      mobileMenu.classList.add('translate-x-full');
+      overlay.classList.add('hidden');
+    }
+
+    menuBtn?.addEventListener('click', openMenu);
+    closeMenu?.addEventListener('click', closeMenuFn);
+    overlay?.addEventListener('click', closeMenuFn);
+
+    // Close when clicking mobile links
+    document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', closeMenuFn));
+
+    /* ---------- Scroll reveal (intersection observer) ---------- */
+    const observers = document.querySelectorAll('.fade-in');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const delay = parseFloat(entry.target.dataset.delay || 0);
+        if(entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), delay * 300);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    observers.forEach(el => io.observe(el));
+
+    /* ---------- Active nav link highlighting ---------- */
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = ['home','services','work','contact'].map(id => document.getElementById(id));
+
+    function onScroll() {
+      const scrollY = window.scrollY + 120; // offset for navbar
+      let current = 'home';
+      sections.forEach(sec => {
+        if(!sec) return;
+        if(scrollY >= sec.offsetTop) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('text-green-600', link.getAttribute('href') === '#' + current);
+      });
+
+      // show scroll-to-top
+      const toTop = document.getElementById('toTop');
+      if(window.scrollY > 400) toTop.style.display = 'block'; else toTop.style.display = 'none';
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+
+    // scroll-to-top button
+    document.getElementById('toTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ---------- small accessibility tweak: close mobile menu on ESC ---------- */
+    window.addEventListener('keydown', e => {
+      if(e.key === 'Escape') closeMenuFn();
+    });

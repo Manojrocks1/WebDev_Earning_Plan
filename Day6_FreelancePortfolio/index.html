@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manoj Kumar — Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="fixed w-full top-0 left-0 bg-white shadow-md z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#home" class="text-2xl font-bold text-green-600">Manoj Kumar</a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex gap-8 items-center text-lg font-medium">
+        <a class="nav-link hover:text-green-600" href="#home">Home</a>
+        <a class="nav-link hover:text-green-600" href="#services">Services</a>
+        <a class="nav-link hover:text-green-600" href="#work">Work</a>
+        <a class="nav-link hover:text-green-600" href="#contact">Contact</a>
+      </nav>
+
+      <!-- Mobile button -->
+      <div class="md:hidden flex items-center gap-3">
+        <!-- social small -->
+        <a href="https://github.com/Manojrocks1?tab=repositories" target="_blank" class="text-gray-700 mr-2">GitHub</a>
+        <button id="menu-btn" class="text-2xl p-2 rounded-md hover:bg-gray-100 focus:outline-none">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE SIDEBAR + OVERLAY -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm hidden z-40 transition-opacity duration-300"></div>
+
+  <aside id="mobileMenu"
+         class="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50 md:hidden">
+    <div class="flex justify-between items-center p-4 border-b">
+      <div class="text-lg font-bold text-green-600">Menu</div>
+      <button id="close-menu" class="p-2 text-gray-700">✕</button>
+    </div>
+    <nav class="p-6 flex flex-col gap-4 text-gray-700 font-semibold">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#work" class="mobile-link">Work</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <div class="mt-4 pt-4 border-t">
+        <a href="https://www.linkedin.com/in/manoj-golla/" target="_blank" class="block text-sm text-gray-600">LinkedIn</a>
+        <a href="https://github.com/Manojrocks1?tab=repositories" target="_blank" class="block text-sm text-gray-600">GitHub</a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- HERO -->
+  <main id="home" class="pt-20">
+    <section class="hero-gradient text-white py-28">
+      <div class="max-w-4xl mx-auto text-center px-6">
+        <img src="Images/Profilepic.jpeg" alt="Manoj" class="mx-auto w-36 h-36 rounded-full profile-img mb-6 fade-in" data-delay="0.1">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight fade-in" data-delay="0.2">
+          <span id="typed" class="typed"></span>
+        </h1>
+        <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-white/90 fade-in" data-delay="0.4">
+          A passionate Web Developer crafting beautiful and responsive websites for clients worldwide.
+        </p>
+
+        <div class="mt-8 fade-in" data-delay="0.6">
+          <a href="#contact" class="inline-block bg-white text-green-700 font-semibold px-6 py-3 rounded-lg shadow hover:scale-105 transition transform">Hire Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-6 fade-in">Services</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-2xl shadow-md fade-in" data-delay="0.1">
+            <h3 class="font-semibold mb-2">Web Development</h3>
+            <p class="text-sm text-gray-600">Responsive websites, landing pages, static and small dynamic sites.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md fade-in" data-delay="0.3">
+            <h3 class="font-semibold mb-2">UI/UX Design</h3>
+            <p class="text-sm text-gray-600">Clean and user-friendly interfaces using Tailwind CSS and modern patterns.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md fade-in" data-delay="0.5">
+            <h3 class="font-semibold mb-2">Freelance Support</h3>
+            <p class="text-sm text-gray-600">Client-ready deliverables, Git usage, and deployment guidance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK / PROJECTS -->
+    <section id="work" class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-8 fade-in">Work</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <article class="bg-white rounded-2xl shadow-md overflow-hidden fade-in" data-delay="0.1">
+            <a href="https://manurestaurantpage.netlify.app" target="_blank">
+            <img src="Images/Restaurant.png" alt="Restaurant" class="w-full h-40 object-cover">
+            </a>
+
+            <div class="p-5">
+              <h3 class="font-semibold mb-1">Restaurant Website</h3>
+              <p class="text-sm text-gray-600 mb-3">Modern UI with menu and contact integration.</p>
+              <a href="https://manurestaurantpage.netlify.app" target="_blank" class="text-green-600 font-medium">View Project →</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="bg-white rounded-2xl shadow-md overflow-hidden fade-in" data-delay="0.3">
+            <a href="https://manojkumartodo.netlify.app/" target="_blank">
+            <img src="Images/Todo.png" alt="Todo" class="w-full h-40 object-cover">
+            </a>
+
+            <div class="p-5">
+              <h3 class="font-semibold mb-1">To-Do App</h3>
+              <p class="text-sm text-gray-600 mb-3">LocalStorage-based task manager built with Tailwind + JS.</p>
+              <a href="https://manojkumartodo.netlify.app/" target="_blank" class="text-green-600 font-medium">View Project →</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="bg-white rounded-2xl shadow-md overflow-hidden fade-in" data-delay="0.5">
+            <a href="https://manuproductcase.netlify.app/" target="_blank">
+            <img src="Images/Productshowcase.png" alt="Product" class="w-full h-40 object-cover">
+            </a>
+
+            <div class="p-5">
+              <h3 class="font-semibold mb-1">Product Showcase</h3>
+              <p class="text-sm text-gray-600 mb-3">Filter, search and progress features demo.</p>
+              <a href="https://manuproductcase.netlify.app/" target="_blank" class="text-green-600 font-medium">View Project →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-6 fade-in">Contact</h2>
+        <form class="bg-white p-8 rounded-2xl shadow-md grid gap-4 fade-in" data-delay="0.2">
+          <input class="border p-3 rounded" placeholder="Your name" />
+          <input class="border p-3 rounded" placeholder="Your email" />
+          <textarea class="border p-3 rounded" rows="4" placeholder="Message"></textarea>
+          <button class="bg-green-600 text-white p-3 rounded hover:bg-green-700 transition">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="py-8 text-center text-sm text-gray-500">
+      © 2025 Manoj Kumar — Built with ❤️
+    </footer>
+  </main>
+
+  <!-- Scroll to top -->
+  <button id="toTop" aria-label="Scroll to top" class="bg-green-600 text-white p-3 rounded-full shadow-lg">
+    ↑
+  </button>
+
+</body>
+ <script src="Portfolio.js"></script>
+</html>

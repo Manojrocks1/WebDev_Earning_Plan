@@ -1,0 +1,50 @@
+    :root { --accent: #16a34a; --accent-dark: #059669; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; }
+
+    /* Animated gradient background for hero */
+    .hero-gradient {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #06b6d4 100%);
+      background-size: 200% 200%;
+      animation: gradientMove 12s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* fade-in-up keyframes for reveal */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* typing effect */
+    .typed {
+      display: inline-block;
+      border-right: 2px solid rgba(255,255,255,0.6);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    /* profile shadow */
+    .profile-img {
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      border: 6px solid rgba(255,255,255,0.08);
+    }
+
+    /* slide-in menu transition handled by translate-x-full class from tailwind */
+    /* scroll to top button */
+    #toTop {
+      position: fixed;
+      right: 18px;
+      bottom: 22px;
+      z-index: 60;
+      display: none;
+    }
